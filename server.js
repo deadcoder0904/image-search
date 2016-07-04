@@ -7,8 +7,7 @@ var schema = require("./schema");
 var port = process.env.PORT || 3000;
 var connectDb = require('./connectdb');
 var BASE_URL = process.env.PORT ? "https://image-search-0904.herokuapp.com/" : "http://localhost:3000";
-var PRIVATE = require('./private');
-var Bing = require('node-bing-api')({ accKey: PRIVATE.accKey });
+var Bing = require('node-bing-api')({ accKey: process.env.accKey || require('./private').accKey });
 
 app.use(express.static(__dirname + "/public"));
 
