@@ -63,7 +63,7 @@ app.get('/api/latest/imagesearch',function(req,res) {
 });
 
 app.listen(port,function() {
-	var url = "http://localhost:"+port;
+	var url = BASE_URL;
 	console.log("MAGIC HAPPENING @ " + url);
 	open(url);
 });
